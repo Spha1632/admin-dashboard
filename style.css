@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.main-content {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
