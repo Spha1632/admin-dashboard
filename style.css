@@ -2,7 +2,8 @@
     --primary-color: #2e2657;
     --primary-light: #625b7f;
     --text-color: #dedfe9;
-    --bg-color: #f0f4f9;
+    /* --bg-color: #f0f4f9; */
+    --bg-color: rgb(221, 219, 219);
 }
 
 * {
@@ -27,7 +28,7 @@ body {
 /* SIDEBAR */
 
 .sidebar {
-    height: 100vh;
+    height: 100%;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     background-color: var(--primary-color);
@@ -179,4 +180,84 @@ button:hover {
 .main-content {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    padding: 24px 16px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 16px;
+}
+
+.heading {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.main-content .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px 16px;
+    border-radius: 8px;
+}
+
+.card .title {
+    font-weight: 900;
+}
+
+.card p:nth-child(2) {
+    font-size: .8rem;
+    opacity: .8;
+    margin-bottom: 20px;
+}
+
+.card .icons {
+    display: grid;
+    grid-template-columns: repeat(3, 20px);
+    column-gap: 16px;
+    justify-self: end;
+    height: 16px;
+}
+
+.announcements {
+    row-gap: 16px;
+}
+
+.announcements {
+    margin-bottom: 24px;
+}
+
+.announcements .card .title {
+    font-size: .8rem;
+}
+
+.announcements .card-text {
+    font-size: .7rem;
+    opacity: .8rem;
+    margin-bottom: 16px;
+}
+
+.divider {
+    border-top: 1px solid #bbb;
+    margin-bottom: 16px;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    font-size: .8rem;
+}
+
+.trending .card {
+    display: grid;
+    row-gap: 8px;
+}
+
+.user .profile-picture {
+    height: 45px;
+    grid-column: 1 / 2;
+    align-items: center;
 }
